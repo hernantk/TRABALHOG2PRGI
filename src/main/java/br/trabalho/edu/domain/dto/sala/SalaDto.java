@@ -1,4 +1,4 @@
-package br.trabalho.edu.domain.dto.aluno;
+package br.trabalho.edu.domain.dto.sala;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,12 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class AlunoDto {
+public class SalaDto {
 
     private Integer id;
-    private String nome;
-    private String datanascimento;
-    private String celular;
-    private String email;
-
+    private String materia;
+    private String semestre;
 }
