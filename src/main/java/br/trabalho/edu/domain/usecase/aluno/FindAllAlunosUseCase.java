@@ -5,8 +5,6 @@ import br.trabalho.edu.data.repository.AlunoRepository;
 import br.trabalho.edu.domain.dto.aluno.AlunoDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
