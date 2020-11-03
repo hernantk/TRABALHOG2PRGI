@@ -19,7 +19,7 @@ public class Aluno {
     private String nome;
 
     @Column(name = "datanascimento")
-    private LocalDate datanascimento;
+    private String datanascimento;
 
 
     @Column(name = "celular")
