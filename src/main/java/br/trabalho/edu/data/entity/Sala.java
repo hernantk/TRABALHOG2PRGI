@@ -23,6 +23,7 @@ public class Sala {
     private String materia;
 
 
-    @OneToMany(mappedBy = "user")
+    @ManyToOne
+    @Column(name = "user")
     private User user;
 }
