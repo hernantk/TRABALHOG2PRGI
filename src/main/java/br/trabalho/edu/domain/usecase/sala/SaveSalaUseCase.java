@@ -2,7 +2,7 @@ package br.trabalho.edu.domain.usecase.sala;
 
 import br.trabalho.edu.data.entity.Sala;
 import br.trabalho.edu.data.entity.User;
-import br.trabalho.edu.data.repository.SalaRespository;
+import br.trabalho.edu.data.repository.SalaRepository;
 import br.trabalho.edu.domain.dto.sala.NewSalaDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class SaveSalaUseCase {
 
-    private SalaRespository repository;
+    private SalaRepository repository;
 
     public void execute(NewSalaDto dto){
 

@@ -1,7 +1,7 @@
 package br.trabalho.edu.domain.usecase.sala;
 
 import br.trabalho.edu.data.entity.Sala;
-import br.trabalho.edu.data.repository.SalaRespository;
+import br.trabalho.edu.data.repository.SalaRepository;
 import br.trabalho.edu.domain.dto.sala.SalaDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 @Service
 public class FindByUserSalaUseCase {
 
-    private SalaRespository repository;
+    private SalaRepository repository;
 
     public List<SalaDto> execute(Integer id){
         List<Sala> result= repository.findAllByUser(id);
