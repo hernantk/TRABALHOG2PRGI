@@ -6,13 +6,16 @@ import br.trabalho.edu.domain.dto.trabalho.TrabalhoDto;
 
 import br.trabalho.edu.domain.usecase.trabalho.FindAllTrabalhoUseCase;
 import br.trabalho.edu.domain.usecase.trabalho.SaveTrabalhoUseCase;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
+@AllArgsConstructor
+@RestController
+@RequestMapping("/trabalho")
 public class TrabalhoController {
 
 
