@@ -1,12 +1,17 @@
 package br.trabalho.edu.data.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
-
-@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@Data
 @Table (name = "trabalho_prova")
 public class Trabalho {
 

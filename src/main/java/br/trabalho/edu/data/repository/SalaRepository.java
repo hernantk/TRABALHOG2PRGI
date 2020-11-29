@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface SalaRepository extends JpaRepository<Sala,Integer>{
 
-    List<Sala> findAllByUser(Integer id);
+
 
 
 }

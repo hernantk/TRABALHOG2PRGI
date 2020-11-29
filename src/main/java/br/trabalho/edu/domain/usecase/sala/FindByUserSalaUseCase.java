@@ -15,8 +15,8 @@ public class FindByUserSalaUseCase {
 
     private SalaRepository repository;
 
-    public List<SalaDto> execute(Integer id){
-        List<Sala> result= repository.findAllByUser(id);
+    public List<SalaDto> execute(){
+        List<Sala> result= repository.findAll();
 
         return result.stream().map(
                 r -> SalaDto.builder().id(r.getIdsala())

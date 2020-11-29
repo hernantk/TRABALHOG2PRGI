@@ -19,9 +19,9 @@ public class SalaController {
     private FindByUserSalaUseCase findAllUseCase;
     private SaveSalaUseCase saveUseCase;
 
-    @GetMapping("/{id}")
-    public ResponseEntity<List<SalaDto>> list(@PathVariable Integer id){
-        List<SalaDto> list = findAllUseCase.execute(id);
+    @GetMapping("/")
+    public ResponseEntity<List<SalaDto>> list(){
+        List<SalaDto> list = findAllUseCase.execute();
 
         if (list.isEmpty()) {
             return ResponseEntity.noContent().build();

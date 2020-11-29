@@ -18,9 +18,7 @@ public class SaveSalaUseCase {
         sala.setMateria(dto.getMateria());
         sala.setSemestre(dto.getSemestre());
 
-        User user = new User();
-        user.setUser_id(dto.getUserid());
-        sala.setUser(user);
+
 
 
         repository.save(sala);

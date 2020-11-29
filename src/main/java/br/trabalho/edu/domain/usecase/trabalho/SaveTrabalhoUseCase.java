@@ -22,9 +22,7 @@ public class SaveTrabalhoUseCase {
         trabalho.setNota(dto.getNota());
         trabalho.setTitulo(dto.getTitulo());
 
-        User user = new User();
-        user.setUser_id(dto.getIduser());
-        trabalho.setUser(user);
+
 
 
 
