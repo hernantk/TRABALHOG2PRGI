@@ -31,8 +31,5 @@ public class Trabalho {
     private Date dataentrega;
 
 
-    @ManyToOne
-    @Column(name = "user")
-    private User user;
 
 }

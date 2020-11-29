@@ -22,7 +22,5 @@ public class Sala {
     private String materia;
 
 
-    @ManyToOne
-    @Column(name = "user")
-    private User user;
+
 }

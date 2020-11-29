@@ -1,7 +1,6 @@
 package br.trabalho.edu.domain.usecase.sala;
 
 import br.trabalho.edu.data.entity.Sala;
-import br.trabalho.edu.data.entity.User;
 import br.trabalho.edu.data.repository.SalaRepository;
 import br.trabalho.edu.domain.dto.sala.NewSalaDto;
 import lombok.AllArgsConstructor;
