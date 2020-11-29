@@ -16,7 +16,6 @@ public class NewTrabalhoProvaDto {
     private String titulo;
     private String descricao;
     private Double nota;
-    private Date dataPostagem;
     private Date dataEntrega;
 
 }

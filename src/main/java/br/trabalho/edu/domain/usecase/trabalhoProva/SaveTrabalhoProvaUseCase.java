@@ -6,6 +6,8 @@ import br.trabalho.edu.domain.dto.trabalhoProva.NewTrabalhoProvaDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+
 @AllArgsConstructor
 @Service
 public class SaveTrabalhoProvaUseCase {
@@ -19,7 +21,7 @@ public class SaveTrabalhoProvaUseCase {
         trabalho.setTitulo(dto.getTitulo());
         trabalho.setDescricao(dto.getDescricao());
         trabalho.setNota(dto.getNota());
-        trabalho.setDatapostagem(dto.getDataPostagem());
+        trabalho.setDatapostagem(new Date());
         trabalho.setDataentrega(dto.getDataEntrega());
 
 
