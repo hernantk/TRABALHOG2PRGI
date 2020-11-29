@@ -1,6 +1,8 @@
-package br.trabalho.edu.domain.dto.aluno;
+package br.trabalho.edu.domain.dto.trabalhoProvaAluno;
 
+import br.trabalho.edu.data.entity.Aluno;
 import br.trabalho.edu.data.entity.Materia;
+import br.trabalho.edu.data.entity.TrabalhoProva;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,13 +14,10 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class AlunoDto {
+public class TrabalhoProvaAlunoDto {
 
     private Integer id;
-    private String nome;
-    private Date datanascimento;
-    private String celular;
-    private String email;
-    private String materia;
+    private Aluno aluno;
+    private TrabalhoProva trabalho;
 
 }

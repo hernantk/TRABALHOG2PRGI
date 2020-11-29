@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
+
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,12 +25,16 @@ public class Aluno {
     private String nome;
 
     @Column(name = "datanascimento")
-    private String datanascimento;
-
+    private Date datanascimento;
 
     @Column(name = "celular")
     private String celular;
 
     @Column(name = "email")
     private String email;
+
+    @OneToOne
+    @JoinColumn(name = "idmateria")
+    private Materia idmateria;
+
 }

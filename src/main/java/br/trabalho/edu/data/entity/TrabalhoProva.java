@@ -13,10 +13,10 @@ import java.util.Date;
 @Entity
 @Data
 @Table (name = "trabalho_prova")
-public class Trabalho {
+public class TrabalhoProva {
 
     @Id
-    @Column(name = "id")
+    @Column(name = "idtrabalho")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
@@ -35,6 +35,9 @@ public class Trabalho {
     @Column(name = "dataentrega")
     private Date dataentrega;
 
+    @OneToOne
+    @JoinColumn(name = "idmateria")
+    private Materia idmateria;
 
 
 }

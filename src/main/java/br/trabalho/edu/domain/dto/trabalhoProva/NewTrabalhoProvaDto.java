@@ -1,5 +1,6 @@
-package br.trabalho.edu.domain.dto.trabalho;
+package br.trabalho.edu.domain.dto.trabalhoProva;
 
+import br.trabalho.edu.data.entity.Materia;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,12 +12,12 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class NewTrabalhoDto {
+public class NewTrabalhoProvaDto {
 
     private String titulo;
     private String descricao;
     private Double nota;
     private Date dataPostagem;
     private Date dataEntrega;
-    private Integer iduser;
+    private Materia materia;
 }

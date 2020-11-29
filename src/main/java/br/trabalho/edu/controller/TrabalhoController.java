@@ -1,11 +1,11 @@
 package br.trabalho.edu.controller;
 
 
-import br.trabalho.edu.domain.dto.trabalho.NewTrabalhoDto;
-import br.trabalho.edu.domain.dto.trabalho.TrabalhoDto;
+import br.trabalho.edu.domain.dto.trabalhoProva.NewTrabalhoProvaDto;
+import br.trabalho.edu.domain.dto.trabalhoProva.TrabalhoProvaDto;
 
-import br.trabalho.edu.domain.usecase.trabalho.FindAllTrabalhoUseCase;
-import br.trabalho.edu.domain.usecase.trabalho.SaveTrabalhoUseCase;
+import br.trabalho.edu.domain.usecase.trabalhoProva.FindAllTrabalhoProvaByAlunoUseCase;
+import br.trabalho.edu.domain.usecase.trabalhoProva.SaveTrabalhoProvaUseCase;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,12 +19,12 @@ import java.util.List;
 public class TrabalhoController {
 
 
-    private FindAllTrabalhoUseCase findAllUseCase;
-    private SaveTrabalhoUseCase saveUseCase;
+    private FindAllTrabalhoProvaByAlunoUseCase findAllUseCase;
+    private SaveTrabalhoProvaUseCase saveUseCase;
 
     @GetMapping
-    public ResponseEntity<List<TrabalhoDto>> list(){
-        List<TrabalhoDto> list = findAllUseCase.execute();
+    public ResponseEntity<List<TrabalhoProvaDto>> list(){
+        List<TrabalhoProvaDto> list = findAllUseCase.execute();
 
         if (list.isEmpty()) {
             return ResponseEntity.noContent().build();
@@ -33,7 +33,7 @@ public class TrabalhoController {
 
     }
     @PostMapping
-    public ResponseEntity<Object> save(@RequestBody NewTrabalhoDto dto){
+    public ResponseEntity<Object> save(@RequestBody NewTrabalhoProvaDto dto){
         saveUseCase.execute(dto);
         return ResponseEntity.ok().build();
 
