@@ -2,7 +2,6 @@ package br.trabalho.edu.controller;
 
 import br.trabalho.edu.domain.dto.aluno.AlunoDto;
 import br.trabalho.edu.domain.dto.aluno.NewAlunoDto;
-import br.trabalho.edu.domain.usecase.aluno.FindAllAlunosByMateria;
 import br.trabalho.edu.domain.usecase.aluno.FindAllAlunosUseCase;
 import br.trabalho.edu.domain.usecase.aluno.SaveAlunoUseCase;
 import lombok.AllArgsConstructor;
@@ -20,7 +19,6 @@ public class AlunoController {
 
 
     private FindAllAlunosUseCase findAllUseCase;
-    private FindAllAlunosByMateria findByMateria;
     private SaveAlunoUseCase saveUseCase;
 
 
@@ -35,16 +33,6 @@ public class AlunoController {
 
     }
 
-    @GetMapping("/byMateria/{materia}")
-    public ResponseEntity<List<AlunoDto>> findByMateria (@PathVariable Integer materia) {
-        List<AlunoDto> alunos = findByMateria.execute(materia);
-
-        if (alunos.isEmpty()) {
-            return ResponseEntity.noContent().build();
-        }
-
-        return ResponseEntity.ok(alunos);
-    }
 
 
     @PostMapping

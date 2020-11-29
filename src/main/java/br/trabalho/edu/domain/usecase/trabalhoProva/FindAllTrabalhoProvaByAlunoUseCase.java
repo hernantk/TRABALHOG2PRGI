@@ -22,7 +22,7 @@ public class FindAllTrabalhoProvaByAlunoUseCase {
                 .nota(trabalho.getNota())
                 .dataPostagem(trabalho.getDatapostagem())
                 .dataEntrega(trabalho.getDataentrega())
-                .materia(trabalho.getIdmateria()).build()).collect(Collectors.toList());
+                .build()).collect(Collectors.toList());
 
     }
 }

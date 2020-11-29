@@ -1,6 +1,5 @@
 package br.trabalho.edu.domain.dto.trabalhoProva;
 
-import br.trabalho.edu.data.entity.Materia;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,5 +18,5 @@ public class NewTrabalhoProvaDto {
     private Double nota;
     private Date dataPostagem;
     private Date dataEntrega;
-    private Materia materia;
+
 }

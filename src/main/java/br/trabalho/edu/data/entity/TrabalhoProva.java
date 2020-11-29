@@ -35,9 +35,6 @@ public class TrabalhoProva {
     @Column(name = "dataentrega")
     private Date dataentrega;
 
-    @OneToOne
-    @JoinColumn(name = "idmateria")
-    private Materia idmateria;
 
 
 }

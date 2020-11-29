@@ -18,7 +18,7 @@ public class FindAllAlunosUseCase {
         List<Aluno> alunos = repository.findAll();
 
         return alunos.stream().map(c ->
-                new AlunoDto(c.getIdaluno(), c.getNome(), c.getDatanascimento(), c.getCelular(), c.getEmail(), c.getIdmateria().getMateria())
+                new AlunoDto(c.getIdaluno(), c.getNome(), c.getEmail())
         ).collect(Collectors.toList());
     }
 

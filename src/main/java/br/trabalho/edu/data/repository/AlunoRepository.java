@@ -12,8 +12,9 @@ import java.util.List;
 @Repository
 public interface AlunoRepository extends JpaRepository<Aluno,Integer> {
 
-    @Query("from Aluno where aluno.idmateria = :materia")
-    List<Aluno> findByMateria(@Param("materia") Integer materia);
+
+
+
 
 
 }

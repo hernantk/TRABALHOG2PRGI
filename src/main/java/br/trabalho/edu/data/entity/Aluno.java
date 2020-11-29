@@ -24,17 +24,9 @@ public class Aluno {
     @Column(name = "nome")
     private String nome;
 
-    @Column(name = "datanascimento")
-    private Date datanascimento;
-
-    @Column(name = "celular")
-    private String celular;
-
     @Column(name = "email")
     private String email;
 
-    @OneToOne
-    @JoinColumn(name = "idmateria")
-    private Materia idmateria;
+
 
 }

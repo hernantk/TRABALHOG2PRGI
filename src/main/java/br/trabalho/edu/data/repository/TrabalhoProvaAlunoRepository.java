@@ -12,7 +12,5 @@ import java.util.List;
 public interface TrabalhoProvaAlunoRepository extends JpaRepository<TrabalhoProvaAluno,Integer> {
 
 
-    @Query("from TrabalhoProvaAluno where trabalhoProvaAluno.idaluno = :aluno")
-    List<TrabalhoProvaAluno> findByAluno(@Param("aluno") Integer aluno);
 
 }
