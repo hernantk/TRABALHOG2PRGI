@@ -19,6 +19,7 @@ public class FindAllTrabalhoProvaByAlunoUseCase {
         List<TrabalhoProva> list = repository.findAll();
 
         return list.stream().map(trabalho -> TrabalhoProvaDto.builder().id(trabalho.getId()).titulo(trabalho.getTitulo())
+                .descricao(trabalho.getDescricao())
                 .nota(trabalho.getNota())
                 .dataPostagem(trabalho.getDatapostagem())
                 .dataEntrega(trabalho.getDataentrega())
