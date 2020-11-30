@@ -22,7 +22,8 @@ public class SaveTrabalhoProvaUseCase {
         trabalho.setDescricao(dto.getDescricao());
         trabalho.setNota(dto.getNota());
         trabalho.setDatapostagem(new Date());
-        trabalho.setDataentrega(dto.getDataEntrega());
+        Date date = dto.getDataEntrega();
+        trabalho.setDataentrega(date);
 
 
         repository.save(trabalho);
