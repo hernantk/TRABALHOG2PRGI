@@ -16,9 +16,8 @@ public class SaveAlunoUseCase {
         Aluno aluno = new Aluno();
 
         aluno.setNome(newAluno.getNome());
-        aluno.setDatanascimento(newAluno.getDatanascimento());
-        aluno.setCelular(newAluno.getCelular());
         aluno.setEmail(newAluno.getEmail());
+
 
         repository.save(aluno);
     }

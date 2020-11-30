@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
+
 import java.util.List;
 
 @AllArgsConstructor
@@ -30,6 +32,8 @@ public class AlunoController {
         return ResponseEntity.ok(list);
 
     }
+
+
 
     @PostMapping
     public ResponseEntity<Object> save(@RequestBody NewAlunoDto newAluno){

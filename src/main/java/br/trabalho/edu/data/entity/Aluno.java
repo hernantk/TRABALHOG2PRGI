@@ -1,11 +1,18 @@
 package br.trabalho.edu.data.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 
-@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@Data
 @Table(name = "aluno")
 public class Aluno {
 
@@ -17,13 +24,9 @@ public class Aluno {
     @Column(name = "nome")
     private String nome;
 
-    @Column(name = "datanascimento")
-    private String datanascimento;
-
-
-    @Column(name = "celular")
-    private String celular;
-
     @Column(name = "email")
     private String email;
+
+
+
 }
